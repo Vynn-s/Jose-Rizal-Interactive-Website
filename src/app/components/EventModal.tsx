@@ -123,6 +123,41 @@ export default function EventModal({ isOpen, onClose, event }: EventModalProps) 
                     </p>
                   </div>
                 )}
+
+                  {/* Learn more / external links */}
+                  <div>
+                    {(() => {
+                      const links: { label: string; href: string }[] = [];
+                      const title = event.title || '';
+                      if (title.includes('Noli')) {
+                        links.push({ label: 'Read Noli Me Tangere (Wikipedia)', href: 'https://en.wikipedia.org/wiki/Noli_Me_Tangere' });
+                      }
+                      if (title.includes('El Filibusterismo') || title.includes('Filibusterismo')) {
+                        links.push({ label: 'Read El Filibusterismo (Wikipedia)', href: 'https://en.wikipedia.org/wiki/El_Filibusterismo' });
+                      }
+                      if (title.includes('Mi Último') || title.includes('Mi Último Adiós') || title.includes('Mi \u00DAltimo')) {
+                        links.push({ label: 'Mi Último Adiós (poem)', href: 'https://en.wikipedia.org/wiki/Mi_%C3%9Altimo_Adios' });
+                      }
+                      if (links.length === 0) {
+                        links.push({ label: "More on José Rizal (Wikipedia)", href: 'https://en.wikipedia.org/wiki/Jos%C3%A9_Rizal' });
+                      }
+
+                      return (
+                        <div className="bg-white/50 p-6 rounded-xl border border-[#C9973A]/20">
+                          <h3 className="text-xl mb-3 text-[#3B2314]" style={{ fontFamily: 'var(--font-display)' }}>Learn More</h3>
+                          <ul className="space-y-2">
+                            {links.map((l) => (
+                              <li key={l.href}>
+                                <a href={l.href} target="_blank" rel="noopener noreferrer" className="text-[#0038A8] hover:underline">
+                                  {l.label}
+                                </a>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      );
+                    })()}
+                  </div>
               </div>
 
               {/* Footer */}

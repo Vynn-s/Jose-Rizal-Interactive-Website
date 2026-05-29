@@ -428,36 +428,42 @@ export function WorksSection() {
         </motion.div>
 
         <div className="flex overflow-x-auto gap-6 pb-8 px-4 md:justify-center">
-          <WorkCard
-            year="1887"
-            titleLineOne="Noli Me"
-            titleLineTwo="Tangere"
-            accentClass="bg-gradient-to-br from-[#3B2314] via-[#4a3520] to-[#5a4030]"
-            yearClass="text-[#FCD116] text-6xl"
-            description='"Touch Me Not" — A scathing social novel exposing corruption, abuse, and hypocrisy in colonial Philippine society under Spanish rule and the Catholic Church.'
-            hoverShadow="0 30px 60px rgba(59, 35, 20, 0.3), 0 0 40px rgba(201, 151, 58, 0.2)"
-            transitionDelay={0}
-          />
-          <WorkCard
-            year="1891"
-            titleLineOne="El Filibusterismo"
-            titleLineTwo="The Reign of Greed"
-            accentClass="bg-gradient-to-br from-[#0038A8] via-[#002a7a] to-[#001f5a]"
-            yearClass="text-[#FCD116] text-5xl"
-            description="A darker sequel exploring the failure of reforms and the growing revolutionary sentiment. It depicts a society pushed to the brink, where only radical change seems possible."
-            hoverShadow="0 30px 60px rgba(0, 56, 168, 0.3), 0 0 40px rgba(252, 209, 22, 0.2)"
-            transitionDelay={0.1}
-          />
-          <WorkCard
-            year="Various Years"
-            titleLineOne="Essays &"
-            titleLineTwo="Poetry"
-            accentClass="bg-gradient-to-br from-[#C9973A] via-[#A17D2F] to-[#8B6914]"
-            yearClass="text-[#3B2314] text-5xl"
-            description='Including "Mi Último Adiós" (My Last Farewell), "To the Filipino Youth," and "The Philippines A Century Hence" — works that inspired national identity and hope.'
-            hoverShadow="0 30px 60px rgba(201, 151, 58, 0.3), 0 0 40px rgba(139, 105, 20, 0.2)"
-            transitionDelay={0.2}
-          />
+          <a href="https://en.wikipedia.org/wiki/Noli_Me_Tangere" target="_blank" rel="noopener noreferrer" className="no-underline">
+            <WorkCard
+              year="1887"
+              titleLineOne="Noli Me"
+              titleLineTwo="Tangere"
+              accentClass="bg-gradient-to-br from-[#3B2314] via-[#4a3520] to-[#5a4030]"
+              yearClass="text-[#FCD116] text-6xl"
+              description='"Touch Me Not" — A scathing social novel exposing corruption, abuse, and hypocrisy in colonial Philippine society under Spanish rule and the Catholic Church.'
+              hoverShadow="0 30px 60px rgba(59, 35, 20, 0.3), 0 0 40px rgba(201, 151, 58, 0.2)"
+              transitionDelay={0}
+            />
+          </a>
+          <a href="https://en.wikipedia.org/wiki/El_Filibusterismo" target="_blank" rel="noopener noreferrer" className="no-underline">
+            <WorkCard
+              year="1891"
+              titleLineOne="El Filibusterismo"
+              titleLineTwo="The Reign of Greed"
+              accentClass="bg-gradient-to-br from-[#0038A8] via-[#002a7a] to-[#001f5a]"
+              yearClass="text-[#FCD116] text-5xl"
+              description="A darker sequel exploring the failure of reforms and the growing revolutionary sentiment. It depicts a society pushed to the brink, where only radical change seems possible."
+              hoverShadow="0 30px 60px rgba(0, 56, 168, 0.3), 0 0 40px rgba(252, 209, 22, 0.2)"
+              transitionDelay={0.1}
+            />
+          </a>
+          <a href="https://en.wikipedia.org/wiki/Mi_%C3%9Altimo_Adios" target="_blank" rel="noopener noreferrer" className="no-underline">
+            <WorkCard
+              year="Various Years"
+              titleLineOne="Essays &"
+              titleLineTwo="Poetry"
+              accentClass="bg-gradient-to-br from-[#C9973A] via-[#A17D2F] to-[#8B6914]"
+              yearClass="text-[#3B2314] text-5xl"
+              description='Including "Mi Último Adiós" (My Last Farewell), "To the Filipino Youth," and "The Philippines A Century Hence" — works that inspired national identity and hope.'
+              hoverShadow="0 30px 60px rgba(201, 151, 58, 0.3), 0 0 40px rgba(139, 105, 20, 0.2)"
+              transitionDelay={0.2}
+            />
+          </a>
         </div>
       </div>
     </section>
