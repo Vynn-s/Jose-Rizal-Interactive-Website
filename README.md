@@ -8,4 +8,12 @@
   Run `npm i` to install the dependencies.
 
   Run `npm run dev` to start the development server.
+
+  ## Deploying to Vercel
+
+  This project is a standard Vite app, so it can be deployed to Vercel without extra routing configuration.
+
+  Use `pnpm build` for the production build command and keep the output directory as `dist`.
+
+  If Vercel prompts for framework detection, select Vite.
   
