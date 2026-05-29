@@ -101,7 +101,7 @@ function MobileMenuButton({ onSelect, active }: { onSelect: (id: string) => void
   return (
     <div className="relative">
       <button
-        onClick={() => setOpen((v) => !v)}
+        onClick={() => setOpen((v: boolean) => !v)}
         aria-label="Open menu"
         className="p-2 rounded-md bg-[#3B2314]/20 text-[#F5EDD6]"
       >

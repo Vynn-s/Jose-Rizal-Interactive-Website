@@ -1,6 +1,10 @@
 import { motion, AnimatePresence } from 'motion/react';
 import { X } from 'lucide-react';
 
+// Lucide icon typing can mismatch between React versions in some setups;
+// cast to `any` for safe rendering without changing runtime behavior.
+const CloseIcon = X as unknown as (props: any) => any;
+
 interface EventModalProps {
   isOpen: boolean;
   onClose: () => void;
@@ -46,7 +50,7 @@ export default function EventModal({ isOpen, onClose, event }: EventModalProps) 
                 onClick={onClose}
                 className="absolute top-4 right-4 z-10 w-10 h-10 rounded-full bg-[#3B2314]/10 hover:bg-[#3B2314]/20 flex items-center justify-center transition-colors"
               >
-                <X size={20} className="text-[#3B2314]" />
+                <CloseIcon size={20} className="text-[#3B2314]" />
               </button>
 
               {/* Header */}

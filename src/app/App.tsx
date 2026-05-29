@@ -44,7 +44,7 @@ export default function App() {
         categories={categories}
         selectedCategory={selectedCategory}
         filteredTimeline={filteredTimeline}
-        onCategoryChange={setSelectedCategory}
+        onCategoryChange={(c: string) => setSelectedCategory(c as (typeof categories)[number])}
         onEventClick={handleEventClick}
       />
       <InfluencesSection />
