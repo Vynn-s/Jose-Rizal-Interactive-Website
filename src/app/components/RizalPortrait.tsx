@@ -5,7 +5,7 @@ export default function RizalPortrait() {
   const portraitUrl = 'https://upload.wikimedia.org/wikipedia/commons/6/6e/Jose%C3%BC_Rizal_portrait.jpg';
 
   return (
-    <div className="relative w-64 h-64 mx-auto mb-8">
+    <div className="relative w-36 h-36 sm:w-48 sm:h-48 md:w-64 md:h-64 mx-auto mb-8">
       {/* Decorative frame */}
       <div className="absolute inset-0 rounded-full border-4 border-[#C9973A] shadow-2xl" />
       <div className="absolute inset-2 rounded-full border-2 border-[#FCD116]/50" />

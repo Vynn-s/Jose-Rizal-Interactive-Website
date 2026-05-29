@@ -74,7 +74,7 @@ function WorkCard({
       viewport={{ once: true, amount: 0.3 }}
       transition={{ delay: transitionDelay, duration: 0.5, ease: 'easeOut' }}
       whileHover={{ y: -12, boxShadow: hoverShadow }}
-      className="flex-shrink-0 w-80 bg-gradient-to-br from-[#F5EDD6] to-[#E8DCC8] rounded-2xl shadow-2xl border-2 border-[#C9973A]/40 overflow-hidden group"
+      className="flex-shrink-0 w-72 sm:w-80 bg-gradient-to-br from-[#F5EDD6] to-[#E8DCC8] rounded-2xl shadow-2xl border-2 border-[#C9973A]/40 overflow-hidden group"
     >
       <div className={`h-64 ${accentClass} flex items-center justify-center relative overflow-hidden`}>
         <div className="absolute inset-0 opacity-10" style={{ backgroundImage: `url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0h20v20H0V0zm20 20h20v20H20V20z' fill='%23C9973A' fill-opacity='0.4' fill-rule='evenodd'/%3E%3C/svg%3E")` }} />
@@ -428,7 +428,7 @@ export function WorksSection() {
         </motion.div>
 
         <div className="flex overflow-x-auto gap-6 pb-8 px-4 md:justify-center">
-          <a href="https://en.wikipedia.org/wiki/Noli_Me_Tangere" target="_blank" rel="noopener noreferrer" className="no-underline">
+          <a href="https://en.wikipedia.org/wiki/Noli_Me_Tangere" target="_blank" rel="noopener noreferrer" className="block no-underline">
             <WorkCard
               year="1887"
               titleLineOne="Noli Me"
@@ -440,7 +440,7 @@ export function WorksSection() {
               transitionDelay={0}
             />
           </a>
-          <a href="https://en.wikipedia.org/wiki/El_Filibusterismo" target="_blank" rel="noopener noreferrer" className="no-underline">
+          <a href="https://en.wikipedia.org/wiki/El_Filibusterismo" target="_blank" rel="noopener noreferrer" className="block no-underline">
             <WorkCard
               year="1891"
               titleLineOne="El Filibusterismo"
@@ -452,7 +452,7 @@ export function WorksSection() {
               transitionDelay={0.1}
             />
           </a>
-          <a href="https://en.wikipedia.org/wiki/Mi_%C3%9Altimo_Adios" target="_blank" rel="noopener noreferrer" className="no-underline">
+          <a href="https://en.wikipedia.org/wiki/Mi_%C3%9Altimo_Adios" target="_blank" rel="noopener noreferrer" className="block no-underline">
             <WorkCard
               year="Various Years"
               titleLineOne="Essays &"

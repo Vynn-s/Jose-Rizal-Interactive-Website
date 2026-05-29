@@ -64,8 +64,7 @@ export default function Navigation() {
               José Rizal
             </span>
           </div>
-
-          <div className="flex items-center gap-1 md:gap-2">
+          <div className="hidden md:flex items-center gap-1 md:gap-2">
             {navItems.map((item) => (
               <button
                 key={item.id}
@@ -80,8 +79,52 @@ export default function Navigation() {
               </button>
             ))}
           </div>
+
+          {/* Mobile menu button */}
+          <div className="md:hidden flex items-center">
+            <MobileMenuButton onSelect={(id) => scrollToSection(id)} active={activeSection} />
+          </div>
         </div>
       </div>
     </nav>
+  );
+}
+
+function MobileMenuButton({ onSelect, active }: { onSelect: (id: string) => void; active: string }) {
+  const [open, setOpen] = useState(false);
+
+  const handleSelect = (id: string) => {
+    setOpen(false);
+    onSelect(id);
+  };
+
+  return (
+    <div className="relative">
+      <button
+        onClick={() => setOpen((v) => !v)}
+        aria-label="Open menu"
+        className="p-2 rounded-md bg-[#3B2314]/20 text-[#F5EDD6]"
+      >
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M4 6H20M4 12H20M4 18H20" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+        </svg>
+      </button>
+
+      {open && (
+        <div className="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg ring-1 ring-black/5 overflow-hidden">
+          <div className="flex flex-col">
+            {navItems.map((item) => (
+              <button
+                key={item.id}
+                onClick={() => handleSelect(item.id)}
+                className={`text-left px-4 py-3 text-sm ${active === item.id ? 'bg-[#F5EDD6]/80 text-[#3B2314]' : 'text-[#3B2314]/90 hover:bg-[#F5EDD6]/50'}`}
+              >
+                {item.label}
+              </button>
+            ))}
+          </div>
+        </div>
+      )}
+    </div>
   );
 }
